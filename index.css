@@ -2,11 +2,23 @@
  box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
+}
     
+:root{
+  --dark: 213 33% 15%;
+  --stop-1: 20%;
+  --stop-2: 40%;
+  --stop-3: 60%;
+  --green: 164 95% 43%;
+  --yellow: 42 100% 70%;
+  --pink: 345 80% 69%;
+  --white: 214 20% 93%;
+}
 body{
    margin: 0 auto;
     max-width: 40em;
+    background:  hsl(var(--dark));
+    color: white;
 }
 
 body > div{
@@ -16,13 +28,33 @@ body > div{
 h1 {
   font-family: 'Alfa Slab One', serif;
   font-size: 3rem;
+  word-wrap: anywhere;
+  background-image: linear-gradient(to left, hsl(var(--green)), hsl(var(--green)) var(--stop-1), hsl(var(--yellow)) var(--stop-1), hsl(var(--yellow)) var(--stop-2), hsl(var(--pink)) var(--stop-2), hsl(var(--pink)) var(--stop-3), transparent var(--stop-3));
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 10%;
+  color: hsl(var(--white));
+  padding: 0.5rem 5px 0.8rem;
+  text-transform: uppercase;
+  transition: all .2s ease;
+  font-weight: 900;
+  text-rendering: optimizeLegibility;
+  text-shadow: -1px -1px hsl(var(--dark)),-1px 1px hsl(var(--dark)),1px -1px hsl(var(--dark)),0 0 hsl(var(--dark)),1px 1px hsl(var(--dark)),2px 2px hsl(var(--dark)),3px 3px hsl(var(--dark)),4px 4px hsl(var(--dark)),5px 5px hsl(var(--dark));
+  
+  &:hover{
+    background-size: 100%;
+    --stop-3: 100%;
+    text-shadow:-1px -1px hsl(var(--dark)),-1px 1px hsl(var(--dark)),1px -1px hsl(var(--dark)),0 0 hsl(var(--dark)),1px 1px hsl(var(--dark)),2px 2px hsl(var(--dark)),3px 3px hsl(var(--dark)),4px 4px hsl(var(--dark)),5px 5px hsl(var(--dark)),6px 6px hsl(var(--dark)),7px 7px hsl(var(--dark)),8px 8px hsl(var(--dark)),9px 9px hsl(var(--dark)),10px 10px hsl(var(--dark));
+  }
 }
 
 p, span{
   padding: 0.2rem 0rem;
+  font-family: ui-monospace,"Source code Pro","Cascadia Mono","Segoe UI Mono","Liberation Mono",Menlo,Monaco,Consolas,monospace; 
   }
 pre {
   display: inline;
+  font-size: 0.8rem;
   font-family: ui-monospace,"Source code Pro","Cascadia Mono","Segoe UI Mono","Liberation Mono",Menlo,Monaco,Consolas,monospace; 
   color: #de935f;
   background: #1d1f21;
