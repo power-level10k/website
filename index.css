@@ -1,0 +1,31 @@
+*{
+ box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+    
+body{
+   margin: 0 auto;
+    max-width: 40em;
+}
+
+body > div{
+  padding-top: 2em;
+}
+
+h1 {
+  font-family: 'Alfa Slab One', serif;
+  font-size: 3rem;
+}
+
+p, span{
+  padding: 0.2rem 0rem;
+  }
+pre {
+  display: inline;
+  font-family: ui-monospace,"Source code Pro","Cascadia Mono","Segoe UI Mono","Liberation Mono",Menlo,Monaco,Consolas,monospace; 
+  color: #de935f;
+  background: #1d1f21;
+  padding: 0.1rem 0.25rem;
+  border-radius: 4px;
+}
